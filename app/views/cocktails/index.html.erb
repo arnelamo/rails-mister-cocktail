@@ -5,12 +5,10 @@
     <div class="cocktail">
       <%= link_to cocktail_path(cocktail) do %>
       <h5><%= cocktail.name %></h5>
+      <%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: :fill %>
       <% end %>
     </div>
     <% end %>
-
-    <%= image_tag("https://res.cloudinary.com/dkibkytpy/image/upload/v1562940187/pgtfyeox8vqg5zckknyc.jpg",
-          width: 400, height: 300, crop: :fill) %>
 
     <%= link_to 'Add new cocktail', new_cocktail_path %>
   </div>
